@@ -24,7 +24,16 @@
               }
            }
         }
-     }
-
+     },
+      "/morepets": {
+        "get":{
+          "summary":"a summary",
+          "responses":{
+            "200":{
+                "description":"OK"
+            }
+          }
+        }
+      }
    }
 }
