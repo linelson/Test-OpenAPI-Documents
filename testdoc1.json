@@ -7,7 +7,7 @@
    "paths":{
       "/test":{
          "get":{
-            "summary":"Sample endpoint for my awesome service.",
+            "summary":"a summary",
             "responses":{
                "200":{
                   "description":"OK"
