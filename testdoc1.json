@@ -5,7 +5,7 @@
       "title":"My New Service"
    },
    "paths":{
-      "/test":{
+      "/testpets":{
          "get":{
             "summary":"a summary",
             "responses":{
