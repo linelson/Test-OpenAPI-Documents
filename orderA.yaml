@@ -1,0 +1,37 @@
+swagger: '2.0'
+info:
+  title: Bug Repro
+  version: 1.0.0
+  description: ''
+host: localhost
+schemes:
+  - https
+definitions:
+  SampleDefinitionA:
+    type: object
+    properties:
+      someProperty:
+        $ref: '#/definitions/SampleDefinitionB'
+  SampleDefinitionB:
+    type: object
+    properties:
+      parentOfAllOf:
+        allOf:
+          - $ref: '#/definitions/SampleEnum'
+        description: Some description of the enum
+  SampleEnum:
+    type: string
+    enum:
+      - ValueA
+      - ValueB
+paths:
+  /sample:
+    get:
+      operationId: Sample
+      summary: Sample
+      description: Sample definition
+      responses:
+        '200':
+          description: Some description
+          schema:
+            $ref: '#/definitions/SampleDefinitionA'
